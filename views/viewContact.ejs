@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Contact</title>
+</head>
+
+<body>
+
+    <table border="1" width="100%">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>email</th>
+                <th>mobile</th>
+                <th>View</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% students.forEach(student=>{ %>
+                <tr>
+                    <td>
+                        <%= student.userName %>
+                    </td>
+                    <td>
+                        <%= student.userEmail %>
+                    </td>
+                    <td>
+                        <%= student.userMobile %>
+                    </td>
+                    <td>
+                        <a href="/view/<%= student._id %>">View</a>
+                    </td>
+                    <td>
+                        <a href="/view/<%= student._id %>">edit</a>
+                    </td>
+                    <td>
+                        <a href="/view/<%= student._id %>">delete</a>
+                    </td>
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+</body>
+
+</html>
