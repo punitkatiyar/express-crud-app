@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Contact</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        form {
+            padding: 2%;
+            background-color: whitesmoke;
+            width: 30%;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            height: 40px;
+            margin-bottom: 1vh;
+
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" action="/edit/<%= student._id%>">
+        <input type="text" name="userName" value="<%= student.userName%>" placeholder="Enter Your Name" required>
+        <input type="email" name="userEmail" value="<%= student.userEmail%>" placeholder="Enter Your Email" required>
+        <input type="text" name="userMobile" value="<%= student.userMobile%>" placeholder="Enter Your Mobile" required>
+        <input type="submit" name="update" value="Update Data">
+    </form>
+
+</body>
+
+</html>
